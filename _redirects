@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-https://juansolano.netlify.app/test.html              /https://juansolano.netlify.app/test
+/test.html /test
