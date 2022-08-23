@@ -1,3 +1,1 @@
-# This rule will trigger at /blog/my-old-title
-/   /home
-https://juansolano.netlify.app/test.html   https://juansolano.netlify.app/test
+# This text file will change url redirects refer to netlify docs
