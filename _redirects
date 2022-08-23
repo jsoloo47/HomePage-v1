@@ -1,2 +1,2 @@
-# Redirects from what the browser requests to what we serve
-/test.html /test
+# This rule will trigger at /blog/my-old-title
+https://juansolano.netlify.app/test.html   https://juansolano.netlify.app/test
