@@ -638,7 +638,8 @@
 					$gallery = $a.parents('.gallery'),
 					$modal = $gallery.children('.modal'),
 					$modalImg = $modal.find('img'),
-					href = $a.attr('href');
+					href = $a.attr('href'),
+					dataSubHtml = $a.attr('data-sub-html');
 
 				// Not an image? Bail.
 					if (!href.match(/\.(jpg|gif|png|mp4)$/))
@@ -663,6 +664,9 @@
 
 				// Focus.
 					$modal.focus();
+					
+				// Add caption
+				$modalImg.after(dataSubHtml);
 
 				// Delay.
 					setTimeout(function() {
@@ -677,7 +681,12 @@
 
 				var $modal = $(this),
 					$modalImg = $modal.find('img');
+					target = $(event.target);
 
+				// If click caption, then ignore.
+				if(target.is('p') || target.is('a')) {
+					return;
+				}
 				// Locked? Bail.
 					if ($modal[0]._locked)
 						return;
@@ -709,6 +718,9 @@
 
 							// Clear src.
 								$modalImg.attr('src', '');
+							
+							// Clear caption
+							$modalImg.next().remove();
 
 							// Unlock.
 								$modal[0]._locked = false;
