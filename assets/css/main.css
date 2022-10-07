@@ -1063,10 +1063,10 @@ input[type="radio"] + label:before {
 }
 
 .image[data-position="bottom"] img {
-  -moz-object-position: bottom;
-  -webkit-object-position: bottom;
-  -ms-object-position: bottom;
-  object-position: bottom;
+  -moz-object-position: top;
+  -webkit-object-position: top;
+  -ms-object-position: top;
+  object-position: top;
 }
 
 .image[data-position="bottom left"] img {
@@ -1087,7 +1087,7 @@ input[type="radio"] + label:before {
   -moz-object-position: center;
   -webkit-object-position: center;
   -ms-object-position: center;
-  object-position: center;
+  object-position: right;
 }
 
 .image[data-position="25% 25%"] img {
